@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dracozeropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dracozeropipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dracozeropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dracozeropipelinesjavascriptdocker 
+          image: myappacrjj01.azurecr.io/dracozeropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
